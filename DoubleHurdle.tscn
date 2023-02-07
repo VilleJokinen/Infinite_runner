@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Hurdle.tscn" type="PackedScene" id=2]
+
+[node name="DoubleHurdle" type="Spatial"]
+
+[node name="Hurdle" parent="." instance=ExtResource( 2 )]
+score_value = 0
+
+[node name="Hurdle2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+score_value = 3
+
+[node name="Coin" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2.0734, -1.1 )

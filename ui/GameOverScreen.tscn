@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/OverlayScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/GameOverScreen.gd" type="Script" id=2]
+
+[node name="GameOverScreen" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="." index="1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -255.5
+margin_top = -144.0
+margin_right = 255.5
+margin_bottom = -3.0
+text = "RIP BOZO
+
+Hävisit, yritä uudelleen."
+align = 1
+
+[node name="ScoreLabel" type="Label" parent="." index="2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -151.0
+margin_top = 38.0
+margin_right = 151.0
+margin_bottom = 83.0
+text = "Score: 123"
+align = 1
+
+[node name="Button" type="Button" parent="." index="3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -76.5
+margin_top = -161.0
+margin_right = 76.5
+margin_bottom = -110.0
+text = "Try Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
